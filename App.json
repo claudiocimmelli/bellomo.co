@@ -1,5 +1,169 @@
+// provata -> p
+// sensibile -> s
+// non sensibile -> ns
+
+// CAPSULE
+
 {
+    'privacy' : [0 || 1], //p
+    'id_user' :           //p
+    'code_finger' :       //p
+    'id_in-kit' :         //p
+    'nome' :              //ns
+    'cognome' :           //ns 
+    'data_nascita' :      //s
+    'citta_natale' :      //s
+    'paese_natale' :      //s
+    'via residenza' :     //s
+    'citta' :             //s
+    'paese' :             //s
+    'CF' :                //s
+    'CI' :                //s
+    'Patente' :           //s
+    'dati' : {
+        'id_dati' :                     //p
 
-"Book": { "Title":"JQuery. Guida pocket", "Author":"David Flanagan", "Price":"€10,97", "ReleseData":"10 nov 2011" } 
+        'carta di credito' : [
+            {                           //s
+                'privacy' : [0 || 1],
+                'nome_carte' :
+                'numero carta credito' :
+                'codice' :
+                'scadenza' :
+                'tipo' :
+            }
+        ]
 
+        'medici' : {
+            'privacy' : [0 || 1],
+            //categoria : [],
+        }
+
+        'categoria' : {               //ns
+            'privacy' : '0',
+            //possibilità di aggiungere categorie dallo sviluppatore
+            //categoria : [],
+        }
+
+        'device' : [
+            {
+                'nome_device' : 
+                'indirizzo_mac' :
+            }
+        ]
+                    
+
+        'app' : [
+            {
+                'nome_app' :
+                'ver' :
+            }
+        ]
+    }
+}
+
+
+// IN-KIT 
+
+{
+    'id_user' :         //p
+    'id_capsule' :      //p
+    'nome' :            //ns
+    'dati' : {
+
+        'id_dati' :                  //p
+
+        //backup della tabella capsule
+        'categoria' : {               //ns
+            'privacy' : '0',
+            //possibilità di aggiungere categorie dallo sviluppatore
+        }
+
+        'device' : [
+            {
+                'nome_device' :
+                'indirizzo_mac' :
+            }
+        ]
+
+        'app' : [
+            {
+                'nome_app' :
+                'ver' :
+            }
+        ]
+    }
+}
+
+
+
+// CLOUD
+
+//user
+{
+    'id_user' :
+    'id_capsule' :
+    'id_inkit' :
+    'digital_password' : //AES256
+    'capsule' : {
+        'id_dati' :                     //p
+        'id_user' :  //user.id_user     //p
+
+        'carta di credito' : {          //s
+            'privacy' : [0 || 1],
+            'numero carta credito' :
+            'codice' :
+            'scadenza' :
+            'tipo' :
+        }
+
+        'medici' : {
+            'privacy' : [0 || 1],
+        }
+
+        'categoria' : {               //ns
+            'privacy' : '0',
+            //possibilità di aggiungere categorie dallo sviluppatore
+        }
+
+        'device' : [
+            {
+                'nome_device' :
+                'indirizzo_mac' :
+            }
+        ]
+
+        'app' : [
+            {
+                'nome_app' :
+                'ver' :
+            }
+        ]
+    }
+
+    'inkit' : {
+        'id_in-kit' :
+        'id_dati' :                  //p
+        'id_user' : //user.id_user   //p
+
+        //backup della tabella capsule
+        'categoria' : {               //ns
+            'privacy' : '0',
+            //possibilità di aggiungere categorie dallo sviluppatore
+        }
+
+        'device' : [
+            {
+                'nome_device' :
+                'indirizzo_mac' :
+            }
+        ]
+
+        'app' : [
+            {
+                'nome_app' :
+                'ver' :
+            }
+        ]
+    }
 }
