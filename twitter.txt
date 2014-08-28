@@ -1,0 +1,4 @@
+SET !ERRORIGNORE YES
+SET !LOOP 1
+TAG POS={{!LOOP}} TYPE=BUTTON ATTR=TYPE:button&&CLASS:js-follow-btn<SP>follow-button<SP>btn&&TXT:Follow<SP>Following<SP>Unfollow<SP>Blocked<SP>Unblock<SP>Pen*
+WAIT SECONDS=0
